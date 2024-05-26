@@ -64,7 +64,7 @@ int main()
         printf("Tag:%d Word:%d\n",tag,word);
 
         flag1=0;
-        for(j=0;j<n;j++) {
+        for(j=0;j<8;j++) {
             if(cache[j][0]==tag) {
                 flag1=1;
                 printf("cache hit\n");
@@ -101,7 +101,7 @@ int main()
 
         
         flag1=0;
-        for(j=0;j<n;j++) {
+        for(j=0;j<8;j++) {
             if(cache[j][0]==tag) {
                 flag1=1;
                 cache[j][word+1]=f;
