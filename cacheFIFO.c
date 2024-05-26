@@ -76,7 +76,7 @@ int main()
             cache[pos][0]=tag;
             for(int j=0;j<4;j++)
                 cache[pos][j+1]=main[tag*4+j];
-            pos=(pos+1)%n;
+            pos=(pos+1)%8;
             printf("cache miss\n\n");
             misses++;
         }
@@ -112,8 +112,8 @@ int main()
             cache[pos][0]=tag;
             for(int j=0;j<4;j++)
                 cache[pos][j+1]=main[tag*4+j];
-            pos=(pos+1)%n;
-            cache[tag][word+1]=f;
+            cache[pos][word+1]=f;
+            pos=(pos+1)%8;
         }
         main[tag*4+word]=f;
         printf("new cache:\n");
